@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Spectral+SC" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Trivia Game</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4 text-center">Trivia Game</h1>
+        <p class="lead text-center pt-3">This is a simple trivia game about animals. Have fun.</p>
+      </div>
+    </div>
+
+
+     <div class="row mt-5" id="gameStart">
+        <div class="col-md-12">
+          <button class="col-md-8 btn-outline-light offset-md-2 btn-primary p-2" id="start"><strong>Click Here To Start</strong></button>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-6  offset-md-3 text-center mt-4">
+          <h5 id="timer" class="bg-secondary text-light py-2">Time Remaining: 15 Seconds </h5>
+        </div>
+      </div>
+
+      <div class="row text-center hideThis">
+        <div class="col-md-6 offset-md-3 py-2 text-center mt-4 backWhite">
+          <h5 id="question"></h5>
+        </div>
+      </div>
+
+      <div class="row text-center hideThis">
+        <div class="col-md-6 offset-md-3 text-center mt-4 backWhite">
+          <h5 id="revealAns"></h5>
+        </div>
+      </div>
+
+      <div class="row hideThis">
+        <div class="col-md-6 backWhite text-center offset-md-3">
+          <h5 id="answer" class="answerDump"></h5>
+        </div>
+      </div>
+
+      <div class="row" id="gameOver">
+        <div class="col-md-6 offset-md-3 text-center backWhite">
+          <h1><strong><u>Results</u></h1>
+          <h5 id="wins">Wins:</h5>
+          <h5 id="losses">Losses:</h5>
+          <h5 id="timeOuts">Time-outs:</strong></h5>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <button id="newGame">New Game</button>
+        </div>
+      </div>
+
+
+       
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
+  </body>
+</html>

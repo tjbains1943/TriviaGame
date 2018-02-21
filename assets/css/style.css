@@ -1,0 +1,33 @@
+body, html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background-image: url("../images/luca-bravo-149740-unsplash.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+#start {
+	background-color: blue;
+	font-size: 26px;
+	font-family: 'Spectral SC', serif;
+}
+
+title {
+	font-family: 'Spectral SC', serif;
+}
+
+.lead {
+	color: blue;
+	font-family: 'Permanent Marker', cursive;
+}
+
+.display-4 {
+	font-family: 'Spectral SC', serif;
+}
+
+.backWhite {
+	background-color: white;
+}
