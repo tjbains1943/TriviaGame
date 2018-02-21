@@ -37,6 +37,7 @@ function setTime() {
 	console.log(time);
 	$("#timer").text("Time Remaining: " + time + " Seconds Left");
 	if (time === 0) {
+		reveal();
 		stopTime();
 		reset();
 		timeOut++;
@@ -92,6 +93,7 @@ function checkWin() {
 		checkAns = event.target.innerHTML;
 		if(checkAns.length >= 100) {return "";}
 		if(checkAns === rightAnswer) {
+			alert("Correct!");
 			reset();
 			wins++;
 			$("#wins").html("Wins:" + wins);
@@ -113,7 +115,7 @@ function checkWin() {
 checkWin();
 
 function reveal() {
-		alert("Wrong, the correct answer was " + rightAnswer + ".");
+		alert("The correct answer was " + rightAnswer + ".");
 
 }
 
