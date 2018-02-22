@@ -1,11 +1,11 @@
-
+// hiding elements until user clicks start button
 $("#timer").hide();
 $("#newGame").hide();
 $("#gameOver").hide();
 $(".hideThis").hide();
 
 $(document).ready(function() {
-    
+// Declaring gloabl variables
 var time = 16;
 var answers = [];
 var rightAnswer;
@@ -20,9 +20,7 @@ var x = 0;
 var display ="";
 var holdArray = [];
 var checkAns;
-
-
-
+// on start click, show the game
 $("#start").on('click', function() {
 	getQuestions();
 	$("#gameStart").hide();
@@ -30,7 +28,7 @@ $("#start").on('click', function() {
 	$(".hideThis").show();
 	setTime();
 })
-
+// starts counting down time
 function setTime() {
     var counter = setInterval(function() { 
 	time--;
@@ -45,12 +43,12 @@ function setTime() {
 	}
  }, 1000);
 }
-
+// stops time counter and sets it to 16 sec
 function stopTime() {
 	clearInterval(counter);
 	time = 16;
 }
-
+// uses ajax to get questions from api
 function getQuestions() {
 	$.ajax({
 		url: questUrl,
@@ -69,7 +67,7 @@ function getQuestions() {
 
 	})
 }
-
+// randomizes order of questions and makes them buttons
 function randomize() {
 	    holdArray = wrongAnswer.sort(() => Math.random() - 0.5);
 	    console.log(holdArray);
@@ -80,14 +78,14 @@ function randomize() {
 		
 	}	
 }
-
+// Empties out question and answer for next question
 function reset() {
 	$('#answer').empty();
 	$("#question").empty();
 	answers = [];
 
 }
-
+// Checks to see if you won or lost
 function checkWin() {
 	$("#answer").on('click', function(event) {
 		checkAns = event.target.innerHTML;
@@ -111,14 +109,14 @@ function checkWin() {
 		}
 	})
 }
-
+// runs checkWin function
 checkWin();
-
+//  alerts right answer.
 function reveal() {
 		alert("The correct answer was " + rightAnswer + ".");
 
 }
-
+// game is over when 10 questions are shown
 function endGame() {
 	if (x === 11) {
 		console.log("game-over");
